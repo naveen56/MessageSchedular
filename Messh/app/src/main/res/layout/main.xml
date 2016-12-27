@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:id="@+id/scrollview1"
+    android:layout_height="fill_parent"
+    android:layout_width="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@+id/relativeLayout1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:padding="8dp"
+                    >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Enter mobile number:"
+            android:id="@+id/textView1"
+            android:layout_alignParentLeft="true"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+        </TextView>
+        <LinearLayout android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/contactlist"
+            android:layout_below="@+id/textView1"
+            android:padding="8dp">
+        <EditText
+
+            android:layout_width="0dip"
+            android:layout_weight="4"
+            android:layout_height="wrap_content"
+            android:id="@+id/etextMblNumber"
+            android:inputType="number"
+            android:padding="8dp">
+        </EditText>
+
+            <Button
+                android:text="+"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:padding="8dp"
+                android:onClick="showContact"
+                ></Button>
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Enter message:"
+            android:id="@+id/textView2"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/contactlist"
+            android:padding="8dp">
+        </TextView>
+        <EditText
+            android:id="@+id/etextMsg"
+            android:layout_width="fill_parent"
+            android:layout_height="250dip"
+            android:layout_below="@+id/textView2"
+            android:gravity="top"
+            android:scrollbars="vertical"
+            android:padding="8dp">
+        </EditText>
+        <Button
+            android:id="@+id/btnSendSMS"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Send SMS"
+            android:layout_below="@+id/etextMsg"
+            android:layout_centerInParent="true"
+            android:padding="8dp">
+        </Button>
+    </RelativeLayout>
+</ScrollView>
